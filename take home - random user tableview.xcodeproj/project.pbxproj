@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		EA35C8152B8F9DF20076C332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35C8142B8F9DF20076C332 /* AppDelegate.swift */; };
 		EA35C8172B8F9DF20076C332 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35C8162B8F9DF20076C332 /* SceneDelegate.swift */; };
-		EA35C8192B8F9DF20076C332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35C8182B8F9DF20076C332 /* ViewController.swift */; };
 		EA35C81C2B8F9DF20076C332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA35C81A2B8F9DF20076C332 /* Main.storyboard */; };
 		EA35C81E2B8F9DF40076C332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA35C81D2B8F9DF40076C332 /* Assets.xcassets */; };
 		EA35C8212B8F9DF40076C332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA35C81F2B8F9DF40076C332 /* LaunchScreen.storyboard */; };
 		EA35C82C2B8F9DF40076C332 /* take_home___random_user_tableviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35C82B2B8F9DF40076C332 /* take_home___random_user_tableviewTests.swift */; };
 		EA35C8362B8F9DF40076C332 /* take_home___random_user_tableviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35C8352B8F9DF40076C332 /* take_home___random_user_tableviewUITests.swift */; };
 		EA35C8382B8F9DF40076C332 /* take_home___random_user_tableviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35C8372B8F9DF40076C332 /* take_home___random_user_tableviewUITestsLaunchTests.swift */; };
+		EA35C8452B8FA0BC0076C332 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35C8442B8FA0BC0076C332 /* UsersViewController.swift */; };
+		EA35C8472B8FA0EC0076C332 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35C8462B8FA0EC0076C332 /* NewUserViewController.swift */; };
+		EA35C84B2B8FA15B0076C332 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35C84A2B8FA15B0076C332 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		EA35C8112B8F9DF20076C332 /* take home - random user tableview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "take home - random user tableview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA35C8142B8F9DF20076C332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA35C8162B8F9DF20076C332 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA35C8182B8F9DF20076C332 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA35C81B2B8F9DF20076C332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA35C81D2B8F9DF40076C332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA35C8202B8F9DF40076C332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		EA35C8312B8F9DF40076C332 /* take home - random user tableviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "take home - random user tableviewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA35C8352B8F9DF40076C332 /* take_home___random_user_tableviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "take_home___random_user_tableviewUITests.swift"; sourceTree = "<group>"; };
 		EA35C8372B8F9DF40076C332 /* take_home___random_user_tableviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "take_home___random_user_tableviewUITestsLaunchTests.swift"; sourceTree = "<group>"; };
+		EA35C8442B8FA0BC0076C332 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		EA35C8462B8FA0EC0076C332 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		EA35C84A2B8FA15B0076C332 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		EA35C8132B8F9DF20076C332 /* take home - random user tableview */ = {
 			isa = PBXGroup;
 			children = (
+				EA35C8492B8FA12D0076C332 /* Model */,
 				EA35C8142B8F9DF20076C332 /* AppDelegate.swift */,
 				EA35C8162B8F9DF20076C332 /* SceneDelegate.swift */,
-				EA35C8182B8F9DF20076C332 /* ViewController.swift */,
+				EA35C8442B8FA0BC0076C332 /* UsersViewController.swift */,
+				EA35C8462B8FA0EC0076C332 /* NewUserViewController.swift */,
 				EA35C81A2B8F9DF20076C332 /* Main.storyboard */,
 				EA35C81D2B8F9DF40076C332 /* Assets.xcassets */,
 				EA35C81F2B8F9DF40076C332 /* LaunchScreen.storyboard */,
@@ -125,6 +131,14 @@
 				EA35C8372B8F9DF40076C332 /* take_home___random_user_tableviewUITestsLaunchTests.swift */,
 			);
 			path = "take home - random user tableviewUITests";
+			sourceTree = "<group>";
+		};
+		EA35C8492B8FA12D0076C332 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA35C84A2B8FA15B0076C332 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA35C8192B8F9DF20076C332 /* ViewController.swift in Sources */,
+				EA35C8452B8FA0BC0076C332 /* UsersViewController.swift in Sources */,
 				EA35C8152B8F9DF20076C332 /* AppDelegate.swift in Sources */,
+				EA35C8472B8FA0EC0076C332 /* NewUserViewController.swift in Sources */,
+				EA35C84B2B8FA15B0076C332 /* User.swift in Sources */,
 				EA35C8172B8F9DF20076C332 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
