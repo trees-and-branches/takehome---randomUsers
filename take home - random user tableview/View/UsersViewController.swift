@@ -11,7 +11,12 @@ class UsersViewController: UIViewController {
     
     var users:[User] = []
     
-    var usersToDisplay:[User] = []
+    var usersToDisplay:[User] = [] { // to maintain users as the source of truth when switching to the random user
+        
+        didSet {
+            usersTableView.reloadData()
+        }
+    }
 
     @IBOutlet weak var usersTableView: UITableView!
     
@@ -36,10 +41,12 @@ class UsersViewController: UIViewController {
     @IBAction func randomUserButtonPressed(_ sender: Any) {
         let randomUsers = getRandomUsers(count: 1)
         usersToDisplay = randomUsers
-        usersTableView.reloadData()
     }
     
-
+    @IBAction func allUsersButtonTapped(_ sender: Any) {
+        usersToDisplay = users
+    }
+    
 }
 
 extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
@@ -59,13 +66,13 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         var content = cell.defaultContentConfiguration()
         
         content.text = user.name
-        content.secondaryText = user.id.uuidString
+//        content.secondaryText = user.id.uuidString
         
         cell.contentConfiguration = content
         
         return cell
         
-    } // I may need a source of truth to be able to switch between all users and the random users
+    }
     
     
 }

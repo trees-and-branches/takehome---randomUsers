@@ -62,6 +62,9 @@
                                         <rect key="frame" x="171.66666666666663" y="0.0" width="161.33333333333337" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="all users"/>
+                                        <connections>
+                                            <action selector="allUsersButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HK1-jk-84b"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -97,8 +100,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mcx-Me-Q4f">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Mcx-Me-Q4f">
                                 <rect key="frame" x="121.66666666666669" y="153" width="150" height="34"/>
+                                <color key="backgroundColor" systemColor="lightTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="r8r-q0-gVc"/>
                                 </constraints>
@@ -147,6 +151,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="lightTextColor">
+            <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

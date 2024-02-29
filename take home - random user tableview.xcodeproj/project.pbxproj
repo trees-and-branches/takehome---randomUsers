@@ -103,11 +103,10 @@
 		EA35C8132B8F9DF20076C332 /* take home - random user tableview */ = {
 			isa = PBXGroup;
 			children = (
+				EA35C84C2B906B520076C332 /* View */,
 				EA35C8492B8FA12D0076C332 /* Model */,
 				EA35C8142B8F9DF20076C332 /* AppDelegate.swift */,
 				EA35C8162B8F9DF20076C332 /* SceneDelegate.swift */,
-				EA35C8442B8FA0BC0076C332 /* UsersViewController.swift */,
-				EA35C8462B8FA0EC0076C332 /* NewUserViewController.swift */,
 				EA35C81A2B8F9DF20076C332 /* Main.storyboard */,
 				EA35C81D2B8F9DF40076C332 /* Assets.xcassets */,
 				EA35C81F2B8F9DF40076C332 /* LaunchScreen.storyboard */,
@@ -139,6 +138,15 @@
 				EA35C84A2B8FA15B0076C332 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EA35C84C2B906B520076C332 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA35C8442B8FA0BC0076C332 /* UsersViewController.swift */,
+				EA35C8462B8FA0EC0076C332 /* NewUserViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
