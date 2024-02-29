@@ -20,6 +20,32 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="630"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" textLabel="ZNu-cI-htI" detailTextLabel="bvs-p2-Soi" style="IBUITableViewCellStyleValue1" id="b1f-zv-wRK">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b1f-zv-wRK" id="Isd-mm-881">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZNu-cI-htI">
+                                                    <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bvs-p2-Soi">
+                                                    <rect key="frame" x="340.33333333333331" y="15" width="32.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fKz-we-SSY">
                                 <rect key="frame" x="30" y="733.66666666666663" width="333" height="34.333333333333371"/>
@@ -28,6 +54,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Random User"/>
+                                        <connections>
+                                            <action selector="randomUserButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vZJ-kV-mSs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Co-fn-iYD">
                                         <rect key="frame" x="171.66666666666663" y="0.0" width="161.33333333333337" height="34.333333333333336"/>
@@ -48,10 +77,13 @@
                     <navigationItem key="navigationItem" id="oWQ-qC-D2r">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="BEE-eS-7mE">
                             <connections>
-                                <segue destination="Mxl-Ro-cuC" kind="show" id="x4Z-Ho-7CL"/>
+                                <segue destination="Mxl-Ro-cuC" kind="show" id="bmk-KF-9uY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="usersTableView" destination="nfP-Ia-Bqt" id="UmF-ie-Uy3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +119,7 @@
                     <navigationItem key="navigationItem" id="e4v-d2-QbG"/>
                     <connections>
                         <outlet property="UsernameTextField" destination="Mcx-Me-Q4f" id="0NH-Qi-v3Z"/>
-                        <segue destination="Ns8-eq-0m4" kind="unwind" unwindAction="prepareFor:sender:" id="sS5-Bg-oAn"/>
+                        <segue destination="Ns8-eq-0m4" kind="unwind" identifier="UnwindToPosts" unwindAction="unwindSegueWithSender:" id="f9h-UV-4Vw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zM-zN-l0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

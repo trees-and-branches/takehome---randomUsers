@@ -8,24 +8,75 @@
 import UIKit
 
 class UsersViewController: UIViewController {
+    
+    var users:[User] = []
+    
+    var usersToDisplay:[User] = []
 
+    @IBOutlet weak var usersTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+        usersTableView.dataSource = self
+        usersTableView.delegate = self
+        
     }
     
-    @IBAction override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+    override func viewWillAppear(_ animated: Bool) {
+        usersToDisplay = users
+        usersTableView.reloadData()
     }
-    /*
-    // MARK: - Navigation
+    
+    @IBAction func unwindSegue(sender: UIStoryboardSegue) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    @IBAction func randomUserButtonPressed(_ sender: Any) {
+        let randomUsers = getRandomUsers(count: 1)
+        usersToDisplay = randomUsers
+        usersTableView.reloadData()
+    }
+    
 
+}
+
+extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return usersToDisplay.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let user = usersToDisplay[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
+        
+        
+        
+        var content = cell.defaultContentConfiguration()
+        
+        content.text = user.name
+        content.secondaryText = user.id.uuidString
+        
+        cell.contentConfiguration = content
+        
+        return cell
+        
+    } // I may need a source of truth to be able to switch between all users and the random users
+    
+    
+}
+
+
+
+extension UsersViewController {
+    
+    func getRandomUsers(count: Int) -> [User] {
+        let shuffled = users.shuffled()
+        
+        return Array(shuffled.prefix(count))
+    }
 }

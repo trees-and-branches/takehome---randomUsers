@@ -1,4 +1,4 @@
-//
+    //
 //  NewUserViewController.swift
 //  take home - random user tableview
 //
@@ -8,6 +8,7 @@
 import UIKit
 
 class NewUserViewController: UIViewController {
+    
 
     @IBOutlet weak var UsernameTextField: UITextField!
     
@@ -20,17 +21,17 @@ class NewUserViewController: UIViewController {
     
 
     @IBAction func returnPressed(_ sender: Any) {
-        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+        
+        performSegue(withIdentifier: "UnwindToPosts", sender: self)
         
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let userName = UsernameTextField.text, let usersViewController = segue.destination as? UsersViewController else { return }
+        usersViewController.users.append(User(id: UUID(), name: userName))
+            
     }
-    */
+    
+     
 
 }
